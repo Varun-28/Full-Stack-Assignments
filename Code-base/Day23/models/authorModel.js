@@ -2,13 +2,20 @@ const mongoose = require("mongoose");
 
 var authorSchema = mongoose.Schema({
     id: Number,
-    name: {
-        type: String,
-        require: true
+    age: {
+        type: Number,
+        required: true
     },
-    books: Array
-}, {
-    strict: false
+    email: {
+        type: String,
+        required: true
+    },
+    name: String,
+    contact_numebr: String,
+    country: String,
+    gender: String,
+    books_published: Array,
+    publications_associated: Array
 });
 
 const author = mongoose.model("Author", authorSchema);
